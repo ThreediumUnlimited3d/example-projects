@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website-threedium-3d-models: github-example</title>
+    <meta name="description" content="website-threedium-3d-models: github-example" />
+    <link rel="stylesheet" href="./assets/src/style.css?v=0.1">
+</head>
+<body>
+    <div class="QRcode">
+        <h1>How to View in<br>Augmented Reality</h1>
+        <p>Scan this QR code with your<br>phone to view the object in<br>your space.</p>
+        <img id="qrCodeImg" src="" alt="QR Code">
+        <a id="closeQRcode" class="closeQRcode" href="#">close</a>
+    </div>
+
+    <a href="#" id="ar-button" class="AR-icon">
+        <img src="./assets/images/ar_icon.svg" alt="AR-icon" style="display:none;">
+    </a>
+
+    <div class="model">
+        <div id="container3d_replace"></div>
+        <div class="loadingContent" id="loadingContent">
+            Loading 3D Model
+            <div class="loading">
+                <div id="loadingBar" class="barBlue"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="helix-configurator">
+        <div class="box">
+            <div class="helix-box">
+                <div class="helix-header">
+                    Helix
+                </div>
+
+                <div class="helix-header" id="toggleHelixOnOff">ON</div>
+
+                <img 
+                    src="./assets/images/on.png" 
+                    alt="helix" 
+                    class="onOff" 
+                    id="imageOnOff" 
+                    onclick="toggleHelixOnOff()">
+
+            </div>
+
+            <div class="gear-colour-box">
+                <div class="gear-header">
+                    Gear
+                </div>
+                <div class="gear-header">
+                    Colour
+                </div> 
+
+                <div 
+                    class="red" 
+                    onclick="changeColor('GearMaterial Red', this)" 
+                    style="box-shadow: rgb(228, 228, 228) 0px 0px 0px 8px;"></div>
+                <div 
+                    class="blue" 
+                    onclick="changeColor('GearMaterial Blue', this)"></div>
+                <div 
+                    class="yellow" 
+                    onclick="changeColor('GearMaterial Yellow', this)"></div>
+            </div>
+        </div>
+
+        <div class="box-mobile">
+            <div class="helix-header-mobile">Helix&nbsp;<span id="toggleHelixMobileOnOff">ON</span></div>            
+            <div class="gear-header-mobile">Gear Colour</div>
+        </div>
+    </div>
+
+    <div class="drag-and-scroll">
+        <img src="./assets/images/drag_and_scroll.png" alt="dragAndScroll" class="drag-and-scroll-image">
+    </div>
+    
+    <script src="https://cdn.unlimited3d.com/js/deviceCheck.js"></script>
+    <script src="https://distcdn.unlimited3d.com/pres/v/2.0.0/unlimited3d.min.js"></script>    
+    <script src="./assets/src/script.js?v=0.1"></script>
+</body>
+</html>

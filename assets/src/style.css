@@ -1,0 +1,368 @@
+body, html {
+    margin:0;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+img {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    object-position: top center;
+}
+
+.objCover {
+    object-fit: cover;
+}
+
+#ar-button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 6.5rem; 
+}
+
+#ar-button img {
+    width: 100%;
+    /* width: 4.5rem; */
+}
+
+.QRcode {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 5vw;
+    top: 18vh;
+    display: none;
+    border: 2px solid #000;
+    background-color: #ffff;
+    padding: 0.5rem;
+    max-width: 11rem;
+}
+
+.QRcode h1 {
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.QRcode p {
+    margin: 0.8rem 0;
+    color: #000;
+    font-size: 1rem;
+}
+
+.QRcode img {
+    width: 65%;
+}
+
+.closeQRcode {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(202, 202, 202, 0.952);
+    text-decoration: none;
+    padding: .4rem 2rem;
+    z-index: 1;
+    width: 3rem;
+    border-radius: 7.7px;
+    color:#000;
+    margin: auto;
+    margin-top: 0.3rem;
+}
+
+.loadingContent {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgb(74, 144, 226);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading {
+    width: 270px;
+    height: 8px;
+    border-radius: 6.5px;
+    background-color: #fff;
+    margin-bottom: 11px;
+}
+
+.loading .barBlue {
+    position: absolute;
+    height: 8px;
+    width: 0;
+    border-radius: 6.5px;
+    background-color: rgb(74, 144, 226);
+}
+
+.model,
+#container3d_replace {
+    width: 100vw;
+    height: 100vh;
+}
+
+.helix-configurator {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 25px 20px;
+    box-shadow:  0 0 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.helix-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.helix-header-mobile {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    display: none;
+}
+
+.gear-header {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.gear-header-mobile {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    display: none;
+}
+
+.onOff {
+    margin: 14px 0px 26px 0px;
+}
+
+.red {
+    background: #BA2A2A;
+    border: 1px solid #BA2A2A;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin: 34px 3px 22px 3px;
+}
+
+.blue {
+    background: #3E2ABA;
+    border: 1px solid #3E2ABA;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin: 0px 3px;
+}
+
+.yellow {
+    background: #BA9A2A;
+    border: 1px solid #BA9A2A;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin: 22px 3px 13px 3px;
+}
+
+.drag-and-scroll {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.drag-and-scroll-image {
+    width: 10rem;
+    height: auto;
+    animation-name: drag-and-scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: drag-and-scroll;
+    -webkit-animation-duration:2s;
+    -webkit-animation-timing-function: linear;
+}
+
+.drag-and-scroll-p {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    color: #4F4E4F;
+}
+
+@keyframes drag-and-scroll {
+    0%   {-webkit-transform: translate(0, 0);}
+    25%  {-webkit-transform: translate(-2rem, 0);}
+    50%  {-webkit-transform: translate(0, 0);}
+    75%  {-webkit-transform: translate(2rem, 0);}
+    100% {-webkit-transform: translate(0, 0);}
+}
+
+@-webkit-keyframes drag-and-scroll {
+    0%   {-webkit-transform: translate(0, 0);}
+    25%  {-webkit-transform: translate(-2rem, 0);}
+    50%  {-webkit-transform: translate(0, 0);}
+    75%  {-webkit-transform: translate(2rem, 0);}
+    100% {-webkit-transform: translate(0, 0);}
+}
+
+@media (max-width: 1399px) {
+	html, body {
+		font-size: 15px;
+    }
+}
+
+@media (max-width: 1199px) {
+	html, body {
+		font-size: 14px;
+    }    
+}
+
+@media (max-width: 991px) {
+	html, body {
+		font-size: 13px;
+    }    
+}
+
+@media (max-width: 767px) {
+	html, body {
+		font-size: 12px;
+    }  
+}
+
+@media (max-width: 575px) {
+    html, body {
+		font-size: 10px;
+    }
+
+    #ar-button {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+    }
+
+    #ar-button,
+    #ar-button img {
+        width: 9rem;
+    }
+
+    .QRcode {
+        left: 5vw;
+        top: 12vh;
+    }
+
+    .drag-and-scroll {
+        bottom: 110px;
+    }
+
+    .helix-configurator {
+        position: absolute;
+        top: initial;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 80%;
+        padding: 15px 20px;
+    } 
+
+    .box {
+        display: flex;
+    }
+
+    .helix-box {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gear-colour-box {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box-mobile {
+        display: flex;
+    }
+
+    .helix-header-mobile {
+        width: 40%;
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gear-header-mobile {
+        width: 60%;
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+
+    .helix-header {
+        display: none;
+    }
+
+    .gear-header {
+        display: none;
+    }
+
+    .onOff,
+    .red,
+    .yellow,
+    .blue {
+        width: 32px;
+        height: 32px;
+    }
+
+    .onOff,
+    .red,
+    .yellow,
+    .blue {
+        margin: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    
+}
